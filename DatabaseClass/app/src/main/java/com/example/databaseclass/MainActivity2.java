@@ -3,7 +3,11 @@ package com.example.databaseclass;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -16,6 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        init();
 //        name1 = findViewById(R.id.name1);
 //        name2 = findViewById(R.id.name2);
 //        name3 = findViewById(R.id.name3);
@@ -50,28 +55,78 @@ public class MainActivity2 extends AppCompatActivity {
 
 //        Dynamically add data to table
 
+//
+//
+//
+//        res.moveToNext();
+//        name2.setText(res.getString(0));
+//        contact2.setText(res.getString(1));
+//        dob2.setText(res.getString(2));
+//
+//        res.moveToNext();
+//        name3.setText(res.getString(0));
+//        contact3.setText(res.getString(1));
+//        dob3.setText(res.getString(2));
+//
+//        res.moveToNext();
+//        name4.setText(res.getString(0));
+//        contact4.setText(res.getString(1));
+//        dob4.setText(res.getString(2));
+//
+//        res.moveToNext();
+//        name5.setText(res.getString(0));
+//        contact5.setText(res.getString(1));
+//        dob5.setText(res.getString(2));
 
+    }
 
+    public void init(){
+        DB = new DatabaseHelper(this);
+        Cursor res = DB.get_data();
 
-        res.moveToNext();
-        name2.setText(res.getString(0));
-        contact2.setText(res.getString(1));
-        dob2.setText(res.getString(2));
+        TableLayout stk = (TableLayout) findViewById(R.id.table_main);
 
-        res.moveToNext();
-        name3.setText(res.getString(0));
-        contact3.setText(res.getString(1));
-        dob3.setText(res.getString(2));
+        TableRow tbrow0 = new TableRow(this);
 
-        res.moveToNext();
-        name4.setText(res.getString(0));
-        contact4.setText(res.getString(1));
-        dob4.setText(res.getString(2));
+        TextView tv0 = new TextView(this);
+        tv0.setText(" Name ");
+        tv0.setTextColor(Color.WHITE);
+        tbrow0.addView(tv0);
 
-        res.moveToNext();
-        name5.setText(res.getString(0));
-        contact5.setText(res.getString(1));
-        dob5.setText(res.getString(2));
+        TextView tv1 = new TextView(this);
+        tv1.setText(" Contact ");
+        tv1.setTextColor(Color.WHITE);
+        tbrow0.addView(tv1);
 
+        TextView tv2 = new TextView(this);
+        tv2.setText(" DOB ");
+        tv2.setTextColor(Color.WHITE);
+        tbrow0.addView(tv2);
+
+        stk.addView(tbrow0);
+
+        while(res.moveToNext()){
+            TableRow tbrow = new TableRow(this);
+
+            TextView t1v = new TextView(this);
+            t1v.setText(res.getString(0));
+            t1v.setTextColor(Color.WHITE);
+            t1v.setGravity(Gravity.CENTER);
+            tbrow.addView(t1v);
+
+            TextView t2v = new TextView(this);
+            t2v.setText(res.getString(1));
+            t2v.setTextColor(Color.WHITE);
+            t2v.setGravity(Gravity.CENTER);
+            tbrow.addView(t2v);
+
+            TextView t3v = new TextView(this);
+            t3v.setText(res.getString(2));
+            t3v.setTextColor(Color.WHITE);
+            t3v.setGravity(Gravity.CENTER);
+            tbrow.addView(t3v);
+
+            stk.addView(tbrow);
+        }
     }
 }
