@@ -1,142 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:stretchColumns="*">
 
-  <TableRow
-      android:layout_width="0dp">
-    <TextView
-        android:layout_column="1"
-        android:text="Name"
-        android:padding="3dip" />
-    <TextView
-        android:text="Contact"
-        android:padding="3dip" />
-    <TextView
-        android:text="DOB"
-        android:padding="3dip" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#3d455b"
+    android:layout_alignParentLeft="true" >
 
-  </TableRow>
+  <HorizontalScrollView
+      android:id="@+id/hscrll1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" >
 
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
-  //Details start from here
-  <TableRow>
-    <TextView
-        android:id="@+id/name1"
-        android:layout_column="1"
-        android:text="Name"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/contact1"
-        android:text="Contact"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/dob1"
-        android:text="DOB"
-        android:padding="3dip" />
-  </TableRow>
-
-  <TableRow>
-    <TextView
-        android:id="@+id/name2"
-        android:layout_column="1"
-        android:text="Wohoooo"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/contact2"
-        android:text="Contact"
-        />
-    <TextView
-        android:id="@+id/dob2"
-        android:text="DOB"
-        />
-  </TableRow>
-
-  <TableRow>
-    <TextView
-        android:id="@+id/name3"
-        android:layout_column="1"
-        android:text="Wohoooo"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/contact3"
-        android:text="Contact"
-        />
-    <TextView
-        android:id="@+id/dob3"
-        android:text="DOB"
-        />
-  </TableRow>
-
-  <TableRow>
-    <TextView
-        android:id="@+id/name4"
-        android:layout_column="1"
-        android:text="------"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/contact4"
-        android:text="------"
-        />
-    <TextView
-        android:id="@+id/dob4"
-        android:text="------"
-        />
-  </TableRow>
-
-  <TableRow>
-    <TextView
-        android:id="@+id/name5"
-        android:layout_column="1"
-        android:text="------"
-        android:padding="3dip" />
-    <TextView
-        android:id="@+id/contact5"
-        android:text="------"
-        />
-    <TextView
-        android:id="@+id/dob5"
-        android:text="------"
-        />
-  </TableRow>
-
-
-
-  <!--  <View-->
-<!--      android:layout_height="2dip"-->
-<!--      android:background="#FF909090" />-->
-
-<!--  <TableRow>-->
-<!--    <TextView-->
-<!--        android:text="X"-->
-<!--        android:padding="3dip" />-->
-<!--    <TextView-->
-<!--        android:text="Import..."-->
-<!--        android:padding="3dip" />-->
-<!--  </TableRow>-->
-
-<!--  <TableRow>-->
-<!--    <TextView-->
-<!--        android:text="X"-->
-<!--        android:padding="3dip" />-->
-<!--    <TextView-->
-<!--        android:text="Export..."-->
-<!--        android:padding="3dip" />-->
-<!--    <TextView-->
-<!--        android:text="Ctrl-E"-->
-<!--        android:gravity="right"-->
-<!--        android:padding="3dip" />-->
-<!--  </TableRow>-->
-
-<!--  <View-->
-<!--      android:layout_height="2dip"-->
-<!--      android:background="#FF909090" />-->
-
-<!--  <TableRow>-->
-<!--    <TextView-->
-<!--        android:layout_column="1"-->
-<!--        android:text="Quit"-->
-<!--        android:padding="3dip" />-->
-<!--  </TableRow>-->
-</TableLayout>
+      <TableLayout
+          android:id="@+id/table_main"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true" >
+      </TableLayout>
+    </RelativeLayout>
+  </HorizontalScrollView>
+</ScrollView>

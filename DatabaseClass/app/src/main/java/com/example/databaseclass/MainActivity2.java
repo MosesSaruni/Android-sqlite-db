@@ -16,33 +16,33 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        name1 = findViewById(R.id.name1);
-        name2 = findViewById(R.id.name2);
-        name3 = findViewById(R.id.name3);
-        name4 = findViewById(R.id.name4);
-        name5 = findViewById(R.id.name5);
-//        name
-
-        contact1 = findViewById(R.id.contact1);
-        contact2 = findViewById(R.id.contact2);
-        contact3 = findViewById(R.id.contact3);
-        contact4 = findViewById(R.id.contact4);
-        contact4 = findViewById(R.id.contact5);
-
-        dob1 = findViewById(R.id.dob1);
-        dob2 = findViewById(R.id.dob2);
-        dob3 = findViewById(R.id.dob3);
-        dob4 = findViewById(R.id.dob4);
-        dob5 = findViewById(R.id.dob5);
-
-        DB = new DatabaseHelper(this);
-        Cursor res = DB.get_data();
-
-
-        res.moveToFirst();
-        name1.setText(res.getString(0));
-        contact1.setText(res.getString(1));
-        dob1.setText(res.getString(2));
+//        name1 = findViewById(R.id.name1);
+//        name2 = findViewById(R.id.name2);
+//        name3 = findViewById(R.id.name3);
+//        name4 = findViewById(R.id.name4);
+//        name5 = findViewById(R.id.name5);
+////        name
+//
+//        contact1 = findViewById(R.id.contact1);
+//        contact2 = findViewById(R.id.contact2);
+//        contact3 = findViewById(R.id.contact3);
+//        contact4 = findViewById(R.id.contact4);
+//        contact4 = findViewById(R.id.contact5);
+//
+//        dob1 = findViewById(R.id.dob1);
+//        dob2 = findViewById(R.id.dob2);
+//        dob3 = findViewById(R.id.dob3);
+//        dob4 = findViewById(R.id.dob4);
+//        dob5 = findViewById(R.id.dob5);
+//
+//        DB = new DatabaseHelper(this);
+//        Cursor res = DB.get_data();
+//
+//
+//        res.moveToFirst();
+//        name1.setText(res.getString(0));
+//        contact1.setText(res.getString(1));
+//        dob1.setText(res.getString(2));
 
 //        while(res.moveToNext()){
 //
