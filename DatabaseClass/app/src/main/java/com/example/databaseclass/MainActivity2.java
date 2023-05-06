@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    TextView name1, name2, name3,name4, name5, contact1, contact2, contact3, contact4, contact5, dob1, dob2, dob3,dob4, dob5;
+//    TextView name1, name2, name3,name4, name5, contact1, contact2, contact3, contact4, contact5, dob1, dob2, dob3,dob4, dob5;
     DatabaseHelper DB;
 
     @Override
@@ -20,7 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        init();
+        tableList();
 //        name1 = findViewById(R.id.name1);
 //        name2 = findViewById(R.id.name2);
 //        name3 = findViewById(R.id.name3);
@@ -80,11 +80,11 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
-    public void init(){
+    public void tableList(){
         DB = new DatabaseHelper(this);
         Cursor res = DB.get_data();
 
-        TableLayout stk = (TableLayout) findViewById(R.id.table_main);
+        TableLayout table = (TableLayout) findViewById(R.id.table_main);
 
         TableRow tbrow0 = new TableRow(this);
 
@@ -103,7 +103,7 @@ public class MainActivity2 extends AppCompatActivity {
         tv2.setTextColor(Color.WHITE);
         tbrow0.addView(tv2);
 
-        stk.addView(tbrow0);
+        table.addView(tbrow0);
 
         while(res.moveToNext()){
             TableRow tbrow = new TableRow(this);
@@ -126,7 +126,7 @@ public class MainActivity2 extends AppCompatActivity {
             t3v.setGravity(Gravity.CENTER);
             tbrow.addView(t3v);
 
-            stk.addView(tbrow);
+            table.addView(tbrow);
         }
     }
 }
